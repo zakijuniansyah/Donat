@@ -4,6 +4,10 @@
   --bg: #010101;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -130,7 +134,7 @@ body {
   margin-top: 1rem;
   margin-bottom: 2rem;
   line-height: 2rem;
-  font-weight: 100;
+  font-weight: 250;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
@@ -231,45 +235,83 @@ body {
 }
 
 /* Contact Section */
+.kontak {
+  padding: 5rem 7%;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 110px;
+}
+
+.kontak h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.kontak p {
+  max-width: 40rem;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
 .kontak .row {
   display: flex;
-  margin-top: 2rem;
-  background-color: #222;
   flex-wrap: wrap;
-  height: 550px;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.kontak .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.kontak .row form .input-group {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-  background-color: var(--bg);
-  border: 1px solid #fff;
-  padding-left: 2rem;
-}
-
-.kontak .row form .input-group input {
+iframe,
+.map-container {
   width: 100%;
-  padding: 1.5rem;
-  font-size: 1.2rem;
-  background: none;
-  color: #fff;
+  max-width: 600px; /* Sesuaikan dengan desain */
+  height: auto;
 }
 
-.kontak .row form .btn {
-  margin-top: 3rem;
-  padding: 1rem 3rem;
-  font-size: 1.2rem;
+.kontak form {
+  flex: 1 1 45%;
+  background: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.kontak form .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.kontak form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.kontak form .btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
   color: #fff;
   background-color: var(--primary);
+  border: none;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.kontak form .btn:hover {
+  background-color: #a4724f;
+}
+
+section#kontak::before {
+  content: "";
+  display: block;
+  height: 230px; /* Sesuaikan dengan margin top */
+  margin-top: -200px;
 }
 
 /* Footer */
@@ -308,46 +350,114 @@ footer .links a {
   html {
     font-size: 75%;
   }
+
+  .hero .content h1 {
+    font-size: 4rem;
+  }
+
+  .hero .content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .menu-kami .row .menu-card {
+    flex: 1 1 45%;
+  }
+
+  .kontak .row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .kontak .row form {
+    padding: 3rem 1rem;
+  }
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
-  #menu {
-    display: inline-block;
-  }
 
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
   }
 
   .navbar .navbar-nav.active {
     right: 0;
   }
+
   .navbar .navbar-nav a {
-    color: var(--bg);
-    margin: 1.5rem;
-    font-size: 2rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
   }
 
-  .about .row,
-  .kontak .row {
-    flex-wrap: wrap;
+  .hero .content h1 {
+    font-size: 3.5rem;
   }
-  .menu-kami p {
+
+  .hero .content p {
     font-size: 1.2rem;
+  }
+
+  .menu-kami .row .menu-card {
+    flex: 1 1 100%;
+  }
+
+  .kontak .row {
+    flex-direction: column;
+  }
+
+  .kontak form,
+  .kontak .kontak-info {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+
+  .hero .content h1 {
+    font-size: 3rem;
+  }
+
+  .hero .content p {
+    font-size: 1rem;
+  }
+
+  .about .row .about-img img {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .menu-kami .row {
+    flex-direction: column;
+  }
+
+  .kontak .row form {
+    padding: 2rem 1rem;
+  }
+
+  .kontak .row .btn {
+    font-size: 1rem;
   }
 }
