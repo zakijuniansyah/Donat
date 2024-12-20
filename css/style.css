@@ -234,6 +234,21 @@ body {
   font-size: 1.2rem;
 }
 
+.menu-kami .row .menu-card .menu-card-price {
+  margin-bottom: 20px;
+}
+
+.menu-kami .row .menu-card a {
+  padding: 10px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  color: white;
+}
+
+.menu-kami .row .menu-card a:hover {
+  background-color: #a4724f;
+}
+
 /* Contact Section */
 .kontak {
   padding: 5rem 7%;

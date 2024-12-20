@@ -1,0 +1,141 @@
+/* Root Variables */
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  /* min-height: 5000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #43301c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#menu {
+  display: none;
+}
+
+/* About Section */
+.menu {
+  padding: 8rem 7% 1.4rem;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.menu h2 span {
+  color: var(--primary);
+}
+
+.menu .row {
+  display: flex;
+}
+
+.menu .row .menu-img {
+  flex: 1 1 45rem;
+}
+
+.menu .row .menu-img img {
+  width: 700px;
+  height: 500px;
+}
+
+.menu .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.menu .row .content p {
+  font-size: 1.2rem;
+  font-weight: 350;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.menu .row .content a {
+  background-color: var(--primary);
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.menu .row .content a:hover {
+  background-color: #a4724f;
+}
