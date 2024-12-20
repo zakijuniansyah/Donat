@@ -4,11 +4,11 @@
   --bg: #010101;
 }
 
+/* Global Settings */
 html {
   scroll-behavior: smooth;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,6 @@ html {
   text-decoration: none;
 }
 
-/* Body */
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
@@ -53,7 +52,6 @@ body {
 
 .navbar .navbar-nav a {
   color: #fff;
-  display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
 }
@@ -87,7 +85,7 @@ body {
   display: none;
 }
 
-/* About Section */
+/* Menu Section */
 .menu {
   padding: 8rem 7% 1.4rem;
 }
@@ -171,6 +169,31 @@ body {
 }
 
 @media (max-width: 768px) {
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    margin: 1.5rem;
+    font-size: 1rem;
+    display: block;
+  }
+
   .menu .row {
     flex-direction: column;
     align-items: center;
@@ -195,19 +218,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    padding: 0.8rem 3%;
-  }
-
-  .navbar .navbar-logo {
-    font-size: 1.5rem;
-  }
-
-  .navbar .navbar-nav a {
-    font-size: 1rem;
-    margin: 0 0.5rem;
-  }
-
   .menu {
     padding: 6rem 3% 1rem;
   }

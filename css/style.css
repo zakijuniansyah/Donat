@@ -401,26 +401,28 @@ footer .links a {
     font-size: 62.5%;
   }
 
+  #menu {
+    display: inline-block;
+  }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.3s ease-in-out;
+    background-color: #fff;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
   }
 
   .navbar .navbar-nav.active {
     right: 0;
   }
-
   .navbar .navbar-nav a {
-    margin: 1rem 0;
+    color: var(--bg);
+    margin: 1.5rem;
     font-size: 1.5rem;
-    color: #fff;
+    display: block;
   }
 
   .hero .content h1 {
